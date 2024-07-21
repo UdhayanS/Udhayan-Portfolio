@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* navbar */
+.navbar ul li a{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+.navbar a{
+    font-size: 25px;
+}
+.navbar #btnn{
+    font-size: 25px;
+    margin-left:110px ;
+    background-color: rgb(255, 136, 0);
+    color: white;
+    width: 270px;
+}
+
+.navbar ul li a:hover{
+    background-color: gray;
+    
+}
+
+.typing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    
+}
+.typing {
+    
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
+}
+
+#frameimg img{
+    height: 400px;
+    
+    border-radius: 50%;
+    box-shadow: -4px 4px 17px rgb(104, 105, 110);
+}
+#frameimg img:hover{
+    padding: 5px;
+    box-shadow: 0 54px 147px rgb(104, 105, 110);
+    background-color: rgb(255, 255, 255);
+}
+
+
+body{
+    font-family: "Josefin Sans", sans-serif;
+}
