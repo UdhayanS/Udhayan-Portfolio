@@ -1,117 +1,341 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-
-/* navbar */
-.navbar ul li a{
-    height: 100%;
+/* Navbar */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar-brand:hover {
+    color: #F5A623; /* Warm Orange on Hover */
+  }
+  
+  .nav-link {
+    position: relative;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #50E3C2; /* Turquoise Green */
+    bottom: -3px;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover {
+    color: #50E3C2; /* Turquoise Green on Hover */
+  }
+  
+  .nav-link:hover::after {
     width: 100%;
-    text-align: center;
-    font-size: 18px;
+  }
+  
+  /* Button */
+  .btn-outline-primary {
+    border-color: #F5A623;
+    color: #F5A623;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #F5A623;
+    color: #fff;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    background: linear-gradient(to bottom right, #4A90E2, #50E3C2);
+    color: #fff;
+    padding: 80px 0;
+  }
+  
+  .typing {
+    color: #fff;
+  }
+  
+  .custom-btn {
+    background-color: #F5A623;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .custom-btn:hover {
+    background-color: #D0021B; /* Bright Red on Hover */
+  }
+  
+  /* Image */
+/* Image */
+#frameimg img {
+    border: 5px solid #fff;
+    border-radius: 50%; /* Make the image round */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .hover-shadow:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+/* About Section */
+.about-section {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        color: #333;
+    padding: 60px 0;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+.about-text {
+    line-height: 1.8;
+    margin: 0 auto;
+    max-width: 800px;
+    color: #333;
+}
+
+.highlight-card {
+    background-color: #FFF;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.highlight-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.highlight-title {
+    font-size: 1.5rem;
     font-weight: bold;
 }
-.navbar a{
-    font-size: 25px;
-}
-.navbar #btnn{
-    font-size: 25px;
-    margin-left:110px ;
-    background-color: rgb(255, 136, 0);
-    color: white;
-    width: 270px;
-}
 
-.navbar ul li a:hover{
-    background-color: gray;
-    
-}
-
-.typing-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    flex-direction: column;
-    
-}
-.typing {
-    
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: .15em solid orange;
-    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-}
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-}
-@keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: orange; }
-}
-
-#frameimg img{
-   
-    border-radius: 50%;
-    box-shadow: -4px 4px 17px rgb(104, 105, 110);
-}
-#frameimg img:hover{
-    padding: 5px;
-    box-shadow: 0 54px 147px rgb(104, 105, 110);
-    background-color: rgb(255, 255, 255);
+.highlight-text {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 
-body{
-    font-family: "Josefin Sans", sans-serif;
+/* General Styles for the Skills Section */
+/* General Styles for the Skills Section */
+#skills {
+    background: linear-gradient(to bottom right, #4A90E2, #50E3C2);
+    color: #f8f9fa; /* Light text color for contrast */
 }
 
-
-.card-body{
-
+#skills h2 {
+    color: #f8f9fa; /* Light color for the heading */
+    font-size: 2.5rem; /* Larger font size for better visibility */
 }
 
-.card{
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    padding: 5px;
-    margin: 20px;
+/* Card Styles */
+.skill-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px; /* Rounded corners for cards */
+    background-color: #ffffff; /* Light background for cards */
+    color: #333; /* Dark text for better readability */
 }
 
-.card:hover{
-    box-shadow: 5px 5px 20px rgb(255, 255, 255);
-    padding: 5px;
-    cursor: pointer;
+.skill-card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+.skill-card .card-body {
+    padding: 2rem; /* Increased padding for better spacing */
+}
+
+.card-title {
+    color: #3498db; /* Light blue color for card titles */
+}
+
+.card-text {
+    color: #7f8c8d; /* Gray color for card text */
 }
 
 
 
 
-body {
-    font-family: 'Roboto', sans-serif;
+
+/* Background Gradient for Projects Section */
+.bg-gradient-pink {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Pink gradient background */
 }
-.typing-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    flex-direction: column;
+
+/* Project Card Styles */
+.project-card {
+    border-radius: 10px;
+    overflow: hidden; /* Rounded corners for card images */
+    background-color: #ffffff; /* Light background for the card */
+    color: #333; /* Dark text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.typing {
-    font-size: 24px;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: .15em solid orange;
-    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+
+.project-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
 }
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+
+.project-img {
+    border-bottom: 4px solid #ff6f61; /* Coral pink border under the image */
 }
-@keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: orange; }
+
+.project-title {
+    color: #ff6f61; /* Coral pink for titles */
 }
-@media (min-width: 992px) { /* Large devices (desktops, 992px and up) */
-    .typing {
-        font-size: 60px;
+
+.project-description {
+    color: #555; /* Darker gray for descriptions */
+}
+
+.btn-outline-light {
+    border-color: #ff6f61;
+    color: #ff6f61;
+}
+
+.btn-outline-light:hover {
+    background-color: #ff6f61;
+    color: #fff;
+}
+
+
+
+
+/* Background Gradient for Experience Section */
+.bg-gradient-experience {
+    background: linear-gradient(to bottom right, #4A90E2, #50E3C2);
+}
+
+/* Experience Card Styles */
+.experience-card {
+    border-radius: 8px;
+    background-color: #ffffff; /* Light background for the card */
+    color: #333; /* Dark text color for readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+.experience-title {
+    color: #f48fb1; /* Light pink for titles */
+    font-size: 1.5rem; /* Larger font size for titles */
+}
+
+.card-body {
+    padding: 2rem; /* Increased padding for better spacing */
+}
+
+.card-text small.text-muted {
+    color: #aaa; /* Lighter gray for dates */
+}
+
+
+
+/* Background Gradient for Certification Section */
+.bg-gradient-cert {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Pink gradient background */
+}
+
+/* Carousel Image Styles */
+.cert-img {
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+/* Title Styles */
+.cert-title {
+    text-align: center;
+    color: #d81b60; /* Deep pink for certificate titles */
+    font-size: 1.25rem; /* Adjusted font size for better readability */
+    margin-top: 10px; /* Space above the title */
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    .carousel-item {
+        text-align: center;
     }
+    .carousel-item .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .carousel-item .col-md-4 {
+        flex: 0 0 100%; /* Full width on mobile */
+        max-width: 100%; /* Ensures the image takes full width */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General styles for the contact section */
+.contact-section {
+    background-color: #f8f9fa; /* Light background color */
+    padding: 40px 0; /* Top and bottom padding */
+    color: #333; /* Text color */
+}
+
+.contact-section h2 {
+    color: #007bff; /* Primary color for headings */
+    margin-bottom: 30px; /* Space below heading */
+}
+
+.contact-item {
+    background-color: #ffffff; /* White background for contact items */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside contact items */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+}
+
+.contact-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.contact-item i {
+    color: #007bff; /* Primary color for icons */
+}
+
+.contact-item h4 {
+    font-weight: bold; /* Bold headings */
+    margin-bottom: 10px; /* Space below headings */
+}
+
+.map-responsive {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    border-radius: 8px; /* Rounded corners for map */
+    margin-top: 30px; /* Space above the map */
+}
+
+.map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
