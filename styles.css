@@ -1,341 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Roboto:wght@400;500;700&display=swap');
+
+
 /* Navbar */
 .navbar-brand {
-    font-weight: bold;
-    font-size: 1.5rem;
-    transition: color 0.3s ease-in-out;
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+  color: #f5a623; /* Warm Orange on Hover */
+}
+
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease-in-out;
+  font-family: "Roboto", system-ui;
+  font-weight: 700;
+  font-style: normal;
+  width: 100px;
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #50e3c2; /* Turquoise Green */
+  bottom: -3px;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #50e3c2; /* Turquoise Green on Hover */
+  background-image: linear-gradient(to bottom right, #4A90E2, #50E3C2);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Button */
+#btnn {
+  border-color: #ffffff;
+  color: #ffffff;
+  background-color: black;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  width: 250px;
+  font-weight: bold;
+}
+
+#btnn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Hero Section */
+
+/* Add basic fade-in-up animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  
-  .navbar-brand:hover {
-    color: #F5A623; /* Warm Orange on Hover */
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .nav-link {
-    position: relative;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    background-color: #50E3C2; /* Turquoise Green */
-    bottom: -3px;
-    left: 0;
-    transition: width 0.3s ease-in-out;
-  }
-  
-  .nav-link:hover {
-    color: #50E3C2; /* Turquoise Green on Hover */
-  }
-  
-  .nav-link:hover::after {
-    width: 100%;
-  }
-  
-  /* Button */
-  .btn-outline-primary {
-    border-color: #F5A623;
-    color: #F5A623;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  }
-  
-  .btn-outline-primary:hover {
-    background-color: #F5A623;
-    color: #fff;
-  }
-  
-  /* Hero Section */
-  .hero-section {
-    background: linear-gradient(to bottom right, #4A90E2, #50E3C2);
-    color: #fff;
-    padding: 80px 0;
-  }
-  
-  .typing {
-    color: #fff;
-  }
-  
-  .custom-btn {
-    background-color: #F5A623;
-    border: none;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .custom-btn:hover {
-    background-color: #D0021B; /* Bright Red on Hover */
-  }
-  
-  /* Image */
+}
+
+
+
+
+.typing-container h1,
+.typing-container p,
+.typing-container a,
+#frameimg img {
+  opacity: 0;
+  transform: translateY(30px);
+  animation-fill-mode: forwards; /* Ensures the animation stays in place after completion */
+  visibility: hidden; /* Initially hidden, becomes visible after animation */
+}
+
+/* Delay and timing for staggered animation */
+.typing-container h1 {
+  animation: fadeInUp 1s ease-in-out forwards;
+  animation-delay: 0.005s; /* First element, 0.5s delay */
+  visibility: visible;
+  font-family: "Protest Guerrilla", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: black;
+}
+
+.typing-container p {
+  animation: fadeInUp 1s ease-in-out forwards;
+  animation-delay: 0.005s; /* Second element, 1s delay */
+  visibility: visible;
+  font-family: "Roboto", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: black;
+
+}
+
+.typing-container a {
+  animation: fadeInUp 1s ease-in-out forwards;
+  animation-delay: 0.5s; /* Third element, 1.5s delay */
+  visibility: visible;
+  font-family: "Roboto", system-ui;
+  font-weight: 700;
+  font-style: normal;
+
+}
+
+#frameimg img {
+  animation: fadeInUp 1s ease-in-out forwards;
+  animation-delay: 0.5s; /* Fourth element, 2s delay */
+  visibility: visible;
+}
+
+.hero-section {
+  /* background: linear-gradient(to bottom right, #4a90e2, #50e3c2); */
+  background: url(./img/banner\ copy.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  color: #fff;
+  padding: 80px 0;
+}
+
+.typing {
+  color: #fff;
+}
+
+.custom-btn {
+  background-color: #f5a623;
+  border: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.custom-btn:hover {
+  background-color: #d0021b; /* Bright Red on Hover */
+}
+
+/* Image */
 /* Image */
 #frameimg img {
-    border: 5px solid #fff;
-    border-radius: 50%; /* Make the image round */
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .hover-shadow:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  }
+  border: 5px solid #fff;
+  border-radius: 50%; /* Make the image round */
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover-shadow:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
 /* About Section */
+
+/* Overall container for the about section */
 .about-section {
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-        color: #333;
-    padding: 60px 0;
+  background-color: #f8f9fa; /* Light gray background */
+  padding: 60px 0;
+  color: #333;
+  font-family: "Roboto", system-ui;
+  font-weight: 400;
+  font-style: normal;
+
 }
 
 .about-section h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #007BFF;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #007bff; /* Professional blue */
+  margin-bottom: 40px;
+  font-family: "Roboto", system-ui;
+  font-weight: 400;
+  font-style: normal;
+
 }
 
-.about-text {
-    line-height: 1.8;
-    margin: 0 auto;
-    max-width: 800px;
-    color: #333;
-}
 
 .highlight-card {
-    background-color: #FFF;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
 }
 
 .highlight-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+}
+
+.highlight-icon {
+  font-size: 3rem;
+  color: #007bff; /* Change color as needed */
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
 .highlight-title {
-    font-size: 1.5rem;
-    font-weight: bold;
+  margin-top: 80px; /* Adjust according to the icon size and position */
 }
 
-.highlight-text {
-    color: #555;
-    font-size: 1rem;
-    line-height: 1.6;
+
+/* For the cards */
+.highlight-card {
+  background-color: #ffffff; /* White background for cards */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 70px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateX(-100px); /* Initially off the screen */
+  font-family: "Roboto", system-ui;
+  font-weight: 400;
+  font-style: normal;
+
 }
 
+.highlight-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow on hover */
+  transform: translateY(-10px); /* Lift on hover */
+}
+
+/* Make cards appear in two columns */
+@media (min-width: 768px) {
+  .highlight-card {
+    transform: translateX(0); /* Reset for wider screens */
+    opacity: 1;
+    margin-bottom: 30px;
+  }
+}
+
+/* Add hover effect for buttons */
+.custom-btn {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Animation on scroll */
+.fade-in {
+  opacity: 1;
+  transform: translateX(0); /* Card enters from the side */
+}
+
+@media (max-width: 767px) {
+  .highlight-card {
+    transform: translateX(0);
+  }
+}
+/* Initial state: Hidden and positioned far to the left or right */
+.highlight-card {
+  opacity: 0;
+  transform: translateX(-150px); /* Initially moved left */
+  transition: opacity 0.4s ease, transform 0.4s ease; /* Speed up the transition */
+}
+
+/* Move from left for the first column */
+.fade-in-left {
+  opacity: 1;
+  transform: translateX(0); /* Move the card into view */
+}
+
+/* Move from right for the second column */
+.fade-in-right {
+  opacity: 1;
+  transform: translateX(0); /* Move the card into view */
+}
+
+/* Staggered animation delays for each card */
+.highlight-card:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.highlight-card:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.highlight-card:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.highlight-card:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.highlight-card:nth-child(5) {
+  transition-delay: 0.5s;
+}
+.highlight-card:nth-child(6) {
+  transition-delay: 0.6s;
+}
 
 /* General Styles for the Skills Section */
-/* General Styles for the Skills Section */
-#skills {
-    background: linear-gradient(to bottom right, #4A90E2, #50E3C2);
-    color: #f8f9fa; /* Light text color for contrast */
-}
-
-#skills h2 {
-    color: #f8f9fa; /* Light color for the heading */
-    font-size: 2.5rem; /* Larger font size for better visibility */
-}
-
-/* Card Styles */
+/* Basic skill card styles */
 .skill-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 10px; /* Rounded corners for cards */
-    background-color: #ffffff; /* Light background for cards */
-    color: #333; /* Dark text for better readability */
+  background: linear-gradient(45deg, #ffffff, #f0f0f0);
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Bouncing animation */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Apply bounce on hover */
 .skill-card:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.skill-card .card-body {
-    padding: 2rem; /* Increased padding for better spacing */
+/* Animation on skill icons */
+.skill-icon {
+  animation: bounce 2s infinite;
 }
 
-.card-title {
-    color: #3498db; /* Light blue color for card titles */
+/* Color customization for icons */
+.text-danger {
+  color: #dc3545;
+}
+.text-primary {
+  color: #007bff;
+}
+.text-warning {
+  color: #ffc107;
+}
+.text-info {
+  color: #17a2b8;
+}
+.text-success {
+  color: #28a745;
 }
 
-.card-text {
-    color: #7f8c8d; /* Gray color for card text */
+/* Skill card title */
+.skill-card h5 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
 }
 
+/* Skill card text */
+.skill-card p {
+  font-size: 0.9rem;
+  color: #666;
+}
 
-
-
+/* Skill card hover effects */
+.skill-card:hover .skill-icon {
+  animation: none; /* Stop bouncing on hover */
+  transform: scale(1.2); /* Slightly increase icon size */
+}
 
 /* Background Gradient for Projects Section */
 .bg-gradient-pink {
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Pink gradient background */
+  background: linear-gradient(
+    135deg,
+    #ff9a9e,
+    #fad0c4
+  ); /* Pink gradient background */
 }
 
 /* Project Card Styles */
-.project-card {
-    border-radius: 10px;
-    overflow: hidden; /* Rounded corners for card images */
-    background-color: #ffffff; /* Light background for the card */
-    color: #333; /* Dark text color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Card container styling */
+.card {
+  border: none; /* Remove default border */
+  border-radius: 15px; /* Rounded corners */
+  overflow: hidden; /* Ensure content does not overflow card boundaries */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+  background-color: #000000; /* White background for cards */
+  position: relative; /* Position relative for pseudo-elements */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.project-card:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+/* Card hover effect */
+.card:hover {
+  transform: translateY(-10px); /* Lift card on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
 }
 
+/* Card image styling */
 .project-img {
-    border-bottom: 4px solid #ff6f61; /* Coral pink border under the image */
+  border-bottom: 5px solid #ff7e5f; /* Accent color below image */
+  border-radius: 15px 15px 0 0; /* Rounded corners on top */
+  transition: transform 0.3s ease; /* Smooth image transition */
 }
 
+/* Image hover effect */
+.card:hover .project-img {
+  transform: scale(1.05); /* Slightly zoom in image on hover */
+}
+
+/* Card body styling */
+.card-body {
+  padding: 20px; /* Padding inside the card */
+}
+
+/* Project title styling */
 .project-title {
-    color: #ff6f61; /* Coral pink for titles */
+  font-family: 'Protest Guerrilla', system-ui; /* Custom font */
+  font-size: 1.75rem; /* Title size */
+  color: #333; /* Dark text color */
+  margin-bottom: 0.75rem; /* Space below title */
+  font-weight: bold; /* Bold title text */
 }
 
+/* Project description styling */
 .project-description {
-    color: #555; /* Darker gray for descriptions */
+  font-size: 1rem; /* Description size */
+  color: #555; /* Slightly lighter text color */
+  margin-bottom: 1rem; /* Space below description */
 }
 
-.btn-outline-light {
-    border-color: #ff6f61;
-    color: #ff6f61;
+/* Project description styling */
+
+
+.projects-section .card:hover{
+  background-color: #d1c9c9;
 }
 
-.btn-outline-light:hover {
-    background-color: #ff6f61;
-    color: #fff;
+/* Button styling */
+.btn-outline-primary {
+  border-color: #ff7e5f; /* Border color */
+  color: #ff7e5f; /* Text color */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for button hover */
+  border-radius: 25px; /* Rounded button corners */
 }
 
+.btn-outline-primary:hover {
+  background-color: #ff7e5f; /* Background color on hover */
+  color: #ffffff; /* Text color on hover */
+}
 
+/* Text-muted styling */
+.text-muted {
+  color: #777; /* Muted text color */
+}
 
+/* Responsive image styling */
+@media (max-width: 767.98px) {
+  .project-img {
+      width: 100%; /* Ensure image fills container on small screens */
+  }
+}
 
 /* Background Gradient for Experience Section */
-.bg-gradient-experience {
-    background: linear-gradient(to bottom right, #4A90E2, #50E3C2);
-}
+
 
 /* Experience Card Styles */
 .experience-card {
-    border-radius: 8px;
-    background-color: #ffffff; /* Light background for the card */
-    color: #333; /* Dark text color for readability */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  background-color: #ffffff; /* Light background for the card */
+  color: #000000; /* Dark text color for readability */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .experience-card:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+  transform: scale(1.04);
+  /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
 }
 
 .experience-title {
-    color: #f48fb1; /* Light pink for titles */
-    font-size: 1.5rem; /* Larger font size for titles */
+  color: #f48fb1; /* Light pink for titles */
+  font-size: 1.5rem; /* Larger font size for titles */
 }
 
 .card-body {
-    padding: 2rem; /* Increased padding for better spacing */
+  padding: 2rem; /* Increased padding for better spacing */
 }
 
 .card-text small.text-muted {
-    color: #aaa; /* Lighter gray for dates */
+  color: #aaa; /* Lighter gray for dates */
 }
-
-
 
 /* Background Gradient for Certification Section */
 .bg-gradient-cert {
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Pink gradient background */
+  background: linear-gradient(
+    135deg,
+    #ff9a9e,
+    #fad0c4
+  ); /* Pink gradient background */
 }
 
 /* Carousel Image Styles */
 .cert-img {
-    border-radius: 8px; /* Rounded corners for images */
+  border-radius: 8px; /* Rounded corners for images */
 }
 
 /* Title Styles */
 .cert-title {
-    text-align: center;
-    color: #d81b60; /* Deep pink for certificate titles */
-    font-size: 1.25rem; /* Adjusted font size for better readability */
-    margin-top: 10px; /* Space above the title */
+  text-align: center;
+  color: #d81b60; /* Deep pink for certificate titles */
+  font-size: 1.25rem; /* Adjusted font size for better readability */
+  margin-top: 10px; /* Space above the title */
 }
 
 /* Mobile View Adjustments */
 @media (max-width: 768px) {
-    .carousel-item {
-        text-align: center;
-    }
-    .carousel-item .row {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .carousel-item .col-md-4 {
-        flex: 0 0 100%; /* Full width on mobile */
-        max-width: 100%; /* Ensures the image takes full width */
-    }
+  .carousel-item {
+    text-align: center;
+  }
+  .carousel-item .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .carousel-item .col-md-4 {
+    flex: 0 0 100%; /* Full width on mobile */
+    max-width: 100%; /* Ensures the image takes full width */
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* General styles for the contact section */
 .contact-section {
-    background-color: #f8f9fa; /* Light background color */
-    padding: 40px 0; /* Top and bottom padding */
-    color: #333; /* Text color */
+  background-color: #f8f9fa; /* Light background color */
+  padding: 40px 0; /* Top and bottom padding */
+  color: #333; /* Text color */
 }
 
 .contact-section h2 {
-    color: #007bff; /* Primary color for headings */
-    margin-bottom: 30px; /* Space below heading */
+  color: #007bff; /* Primary color for headings */
+  margin-bottom: 30px; /* Space below heading */
 }
 
 .contact-item {
-    background-color: #ffffff; /* White background for contact items */
-    border-radius: 8px; /* Rounded corners */
-    padding: 20px; /* Padding inside contact items */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-    transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+  background-color: #ffffff; /* White background for contact items */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding inside contact items */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  transition: box-shadow 0.3s ease; /* Smooth shadow transition */
 }
 
 .contact-item:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 .contact-item i {
-    color: #007bff; /* Primary color for icons */
+  color: #007bff; /* Primary color for icons */
 }
 
 .contact-item h4 {
-    font-weight: bold; /* Bold headings */
-    margin-bottom: 10px; /* Space below headings */
+  font-weight: bold; /* Bold headings */
+  margin-bottom: 10px; /* Space below headings */
 }
 
 .map-responsive {
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
-    height: 0;
-    border-radius: 8px; /* Rounded corners for map */
-    margin-top: 30px; /* Space above the map */
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  border-radius: 8px; /* Rounded corners for map */
+  margin-top: 30px; /* Space above the map */
 }
 
 .map-responsive iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
