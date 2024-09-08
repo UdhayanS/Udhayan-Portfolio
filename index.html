@@ -10,6 +10,7 @@
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <!-- Bootstrap Bundle with Popper (for collapse functionality) -->
 
@@ -20,9 +21,9 @@
   
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body text-light fixed-top" data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg bg-secondary border-bottom border-body text-light fixed-top" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand text-primary" href="#">Udhayan Portfolio</a>
+      <a class="navbar-brand text-light" href="#">Udhayan Portfolio</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -50,7 +51,7 @@
             <a class="nav-link text-light" href="#">Contact Us</a>
           </li>
         </ul>
-        <a class="btn btn-outline-primary" id="btnn" href="assets/Resume-Udhayan.pdf" target="_blank">Resume</a>
+        <a class="btn " id="btnn" href="assets/Resume-Udhayan.pdf" target="_blank">Resume</a>
       </div>
     </div>
   </nav>
@@ -60,8 +61,8 @@
       <div class="row align-items-center">
         <div class="col-lg-7 mb-4 mb-lg-0">
           <div class="typing-container">
-            <h1 class="typing fs-1 text-primary">Welcome to Udhayan's Portfolio</h1>
-            <p class="text-secondary">I’m Udhayan, a BE candidate in Computer Science and Engineering (CSE) with a strong passion for web development. I have experience in executing projects and am currently advancing my skills in Java development and full stack technologies. I have a proven ability to collaborate effectively in multidisciplinary teams to deliver innovative solutions.</p>
+            <h1 class="typing fs-1 ">Welcome to Udhayan's Portfolio</h1>
+            <p class="text">I’m Udhayan, a BE candidate in Computer Science and Engineering (CSE) with a strong passion for web development. I have experience in executing projects and am currently advancing my skills in Java development and full stack technologies. I have a proven ability to collaborate effectively in multidisciplinary teams to deliver innovative solutions.</p>
             <a href="#projects" class="btn btn-primary btn-lg mt-3 custom-btn">Explore My Work</a>
           </div>
         </div>
@@ -73,51 +74,137 @@
   </section>
   
   
+  <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     
 
-  <section class="about-section bg-light text-dark" id="about">
-    <div class="container my py-5">
-      <h2 class="text-center mb-4 text-primary">About Me</h2>
-      <p class="fs-5 text-center about-text">
-        I’m Udhayan, a BE candidate in Computer Science and Engineering (CSE) with a deep passion for web development. I have a proven track record of delivering innovative solutions in multidisciplinary teams. Here are a few key highlights about me:
-      </p>
-      <div class="row text-center mt-5">
-        <div class="col-md-4 mb-4">
-          <div class="highlight-card p-4">
-            <h4 class="highlight-title text-primary">Full Stack Development</h4>
-            <p class="highlight-text">Experience in building responsive and dynamic web applications using modern frameworks like React and Spring Boot.</p>
+  <section class="about-section bg-dark" id="about">
+    <div class="container">
+        <h2 class="text-center mb-5" style="font-family: Protest Guerrilla, system-ui; color: white;">About Me</h2>
+        <p class="fs-5 text-center mb-5 about-text text-light">
+            I’m Udhayan, a BE candidate in Computer Science and Engineering (CSE) with a deep passion for web development. I have a proven track record of delivering innovative solutions in multidisciplinary teams. Here are a few key highlights about me:
+        </p>
+        
+        <div class="row">
+            <!-- First column: Cards will slide in from the left -->
+            <div class="col-lg-6 col-md-12">
+                <div class="highlight-card p-4">
+                    <i class="fas fa-code highlight-icon"></i>
+                    <h4 class="highlight-title text-primary">Full Stack Development</h4>
+                    <p class="highlight-text">Experience in building responsive and dynamic web applications using modern frameworks like React and Spring Boot.</p>
+                </div>
+                <div class="highlight-card p-4">
+                    <i class="fas fa-java highlight-icon"></i>
+                    <h4 class="highlight-title text-primary">Java Expertise</h4>
+                    <p class="highlight-text">Strong proficiency in Java, with hands-on experience in developing backend solutions and integrating with databases like MySQL.</p>
+                </div>
+            </div>
+
+            <!-- Second column: Cards will slide in from the right -->
+            <div class="col-lg-6 col-md-12">
+                <div class="highlight-card p-4">
+                    <i class="fas fa-project-diagram highlight-icon"></i>
+                    <h4 class="highlight-title text-primary">Real-time Project Experience</h4>
+                    <p class="highlight-text">Worked on a real-time project developing a child birth care platform for a US client, focusing on frontend development and payment integration.</p>
+                </div>
+                <div class="highlight-card p-4">
+                    <i class="fas fa-paint-brush highlight-icon"></i>
+                    <h4 class="highlight-title text-primary">Creative Frontend Developer</h4>
+                    <p class="highlight-text">Skilled in creating visually appealing and user-friendly interfaces using HTML, CSS, and JavaScript, React JS ensuring a seamless user experience.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const leftCards = document.querySelectorAll(".col-lg-6:nth-child(1) .highlight-card");
+  const rightCards = document.querySelectorAll(".col-lg-6:nth-child(2) .highlight-card");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (entry.target.closest('.col-lg-6:nth-child(1)')) {
+            entry.target.classList.add("fade-in-left");
+          } else if (entry.target.closest('.col-lg-6:nth-child(2)')) {
+            entry.target.classList.add("fade-in-right");
+          }
+          observer.unobserve(entry.target); // Stop observing once it's in view
+        }
+      });
+    },
+    { threshold: 0.1 } // Trigger when 10% of the element is in view
+  );
+
+  // Observe each card
+  leftCards.forEach((card) => observer.observe(card));
+  rightCards.forEach((card) => observer.observe(card));
+});
+
+  </script>
+  
+
+  <section id="skills">
+    <div class="stars"></div> <!-- Stars background -->
+    <div class="container py-5">
+      <h2 class="text-center mb-5" style="font-family: Protest Guerrilla, system-ui;">My Skills</h2>
+      <div class="row text-center justify-content-center">
+        <div class="col-md-3 mb-4">
+          <div class="skill-card p-4">
+            <i class="fab fa-html5 fa-3x skill-icon text-danger"></i>
+            <h5 class="mt-3">HTML</h5>
+            <p>2+ years of experience</p>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="highlight-card p-4">
-            <h4 class="highlight-title text-primary">Java Expertise</h4>
-            <p class="highlight-text">Strong proficiency in Java, with hands-on experience in developing backend solutions and integrating with databases like MySQL.</p>
+        <div class="col-md-3 mb-4">
+          <div class="skill-card p-4">
+            <i class="fab fa-css3-alt fa-3x skill-icon text-primary"></i>
+            <h5 class="mt-3">CSS</h5>
+            <p>2+ years of experience</p>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="highlight-card p-4">
-            <h4 class="highlight-title text-primary">Creative Frontend Developer</h4>
-            <p class="highlight-text">Skilled in creating visually appealing and user-friendly interfaces using HTML, CSS, and JavaScript, ensuring a seamless user experience.</p>
+        <div class="col-md-3 mb-4">
+          <div class="skill-card p-4">
+            <i class="fab fa-js fa-3x skill-icon text-warning"></i>
+            <h5 class="mt-3">JavaScript</h5>
+            <p>1+ years of experience</p>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="highlight-card p-4">
-            <h4 class="highlight-title text-primary">Real-time Project Experience</h4>
-            <p class="highlight-text">Worked on a real-time project developing a child birth care platform for a US client, focusing on frontend development and payment integration.</p>
+        <div class="col-md-3 mb-4">
+          <div class="skill-card p-4">
+            <i class="fab fa-java fa-3x skill-icon text-danger"></i>
+            <h5 class="mt-3">Java</h5>
+            <p>1+ years of experience</p>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="highlight-card p-4">
-            <h4 class="highlight-title text-primary">Passion for Learning</h4>
-            <p class="highlight-text">Continually advancing my skills in Java development, full stack technologies, and exploring new domains like geolocation-based systems and Firebase.</p>
+        <div class="col-md-3 mb-4">
+          <div class="skill-card p-4">
+            <i class="fab fa-python fa-3x skill-icon text-info"></i>
+            <h5 class="mt-3">Python</h5>
+            <p>1 year of experience</p>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="highlight-card p-4">
-            <h4 class="highlight-title text-primary">Hackathon Participant</h4>
-            <p class="highlight-text">Actively participating in Smart India Hackathon, where I'm working on innovative solutions for coal mining productivity and safety management.</p>
+        <div class="col-md-3 mb-4">
+          <div class="skill-card p-4">
+            <i class="fas fa-database fa-3x skill-icon text-success"></i>
+            <h5 class="mt-3">MySQL</h5>
+            <p>1+ years of experience</p>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="skill-card p-4">
+            <i class="fas fa-leaf fa-3x skill-icon text-success"></i>
+            <h5 class="mt-3">Spring Boot</h5>
+            <p>Intermediate Knowledge</p>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="skill-card p-4">
+            <i class="fab fa-react fa-3x skill-icon text-primary"></i>
+            <h5 class="mt-3">React</h5>
+            <p>Intermediate Knowledge</p>
           </div>
         </div>
       </div>
@@ -125,89 +212,10 @@
   </section>
   
 
-  <section class="bg-dark text-light" id="skills">
-    <div class="container my pb-5">
-        <h2 class="text-center mb-5 py-5">My Skills</h2>
-        <div id="skillsCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row">
-                        <div class="col-md-3 mb-4">
-                            <div class="card text-center bg-light border-0 skill-card">
-                                <div class="card-body">
-                                    <h5 class="card-title text-primary">HTML</h5>
-                                    <p class="card-text">2+ years of experience</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-4">
-                            <div class="card text-center bg-light border-0 skill-card">
-                                <div class="card-body">
-                                    <h5 class="card-title text-primary">CSS</h5>
-                                    <p class="card-text">2+ years of experience</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-4">
-                            <div class="card text-center bg-light border-0 skill-card">
-                                <div class="card-body">
-                                    <h5 class="card-title text-primary">JavaScript</h5>
-                                    <p class="card-text">1+ years of experience</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-4">
-                            <div class="card text-center bg-light border-0 skill-card">
-                                <div class="card-body">
-                                    <h5 class="card-title text-primary">Java</h5>
-                                    <p class="card-text">1+ years of experience</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-4">
-                            <div class="card text-center bg-light border-0 skill-card">
-                                <div class="card-body">
-                                    <h5 class="card-title text-primary">Python</h5>
-                                    <p class="card-text">1 year of experience</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-4">
-                            <div class="card text-center bg-light border-0 skill-card">
-                                <div class="card-body">
-                                    <h5 class="card-title text-primary">MySQL</h5>
-                                    <p class="card-text">1+ years of experience</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-4">
-                            <div class="card text-center bg-light border-0 skill-card">
-                                <div class="card-body">
-                                    <h5 class="card-title text-primary">Spring Boot & Hibernate</h5>
-                                    <p class="card-text">Intermediate Knowledge</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-4">
-                            <div class="card text-center bg-light border-0 skill-card">
-                                <div class="card-body">
-                                    <h5 class="card-title text-primary">React</h5>
-                                    <p class="card-text">Intermediate Knowledge</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add more carousel items if needed -->
-            </div>
-        </div>
-    </div>
-</section>
 
-
-<section class="projects-section bg-gradient-pink text-light py-5" id="projects">
+<section class="projects-section bg-dark text-light py-5" id="projects">
   <div class="container">
-    <h2 class="text-center mb-5">Projects</h2>
+    <h2 class="text-center mb-5" style="font-family: Protest Guerrilla, system-ui;">Projects</h2>
 
     <!-- Project 1 -->
     <div class="card project-card mb-4 p-5">
@@ -216,7 +224,7 @@
           <img src="img/project1.png" class="img-fluid project-img" alt="Pregnancy Care Platform">
         </div>
         <div class="col-md-8">
-          <div class="card-body">
+          <div class="card-body p-5">
             <h3 class="project-title">Pregnancy Care Platform</h3>
             <p class="project-description">Developed a comprehensive pregnancy care platform designed for conducting online Lamaze classes. The project aimed to provide an efficient and user-friendly interface for expecting parents.</p>
             <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
@@ -234,7 +242,7 @@
           <img src="img/project2.png" class="img-fluid project-img" alt="Event Registration Website">
         </div>
         <div class="col-md-8">
-          <div class="card-body">
+          <div class="card-body p-5">
             <h3 class="project-title">Event Registration Website for College Symposium</h3>
             <p class="project-description">Developed a dynamic website to efficiently collect and manage event registration details for a college symposium. The project included user-friendly interfaces and registration forms.</p>
             <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript</p>
@@ -249,13 +257,51 @@
     <div class="card project-card mb-4 p-5">
       <div class="row g-0">
         <div class="col-md-4">
-          <img src="img/project3.png" class="img-fluid project-img" alt="Book Management System">
+          <img src="img/Screenshot 2024-09-08 183949.png" class="img-fluid project-img" alt="Book Management System">
         </div>
         <div class="col-md-8">
-          <div class="card-body">
+          <div class="card-body p-5">
             <h3 class="project-title">Book Management System</h3>
             <p class="project-description">Developed a comprehensive Book Management System using Spring Boot and Hibernate to handle various book-related operations through REST APIs.</p>
             <p><strong>Technologies Used:</strong> Spring Boot, Hibernate</p>
+            <p class="text-muted"><small>Apr 2024 - Jul 2024</small></p>
+            <a href="https://arthilamazeclass.com/" class="btn btn-outline-primary">Visit Site</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Project 4 -->
+    <div class="card project-card mb-4 p-5">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="img/image copy.png" class="img-fluid project-img" alt="Book Management System">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body p-5">
+            <h3 class="project-title">Complete User Authentication</h3>
+            <p class="project-description">Developed a user authentication portal with help of React JS and Firebase DB then deployed with vercel software.</p>
+            <p><strong>Technologies Used:</strong> React JS, Firebase</p>
+            <p class="text-muted"><small>July 2024 </small></p>
+            <a href="https://react-firebase-topaz-nine.vercel.app/" class="btn btn-outline-primary">Visit Site</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Project 5 -->
+    <div class="card project-card mb-4 p-5">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="img/image.png" class="img-fluid project-img" alt="Book Management System">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body p-5">
+            <h3 class="project-title">Shift Log Management</h3>
+            <p class="project-description">A small prototype developed to participate in Smart India Hackathon. It gets the data from supervisor and stores in databse and generated as Pdf</p>
+            <p><strong>Technologies Used:</strong> React, Bootstrap, Firebase</p>
             <p class="text-muted"><small>Apr 2024 - Jul 2024</small></p>
             <a href="https://arthilamazeclass.com/" class="btn btn-outline-primary">Visit Site</a>
           </div>
@@ -268,10 +314,10 @@
 
 
 
-<section class="experience-section bg-gradient-experience text-light py-5" id="experience">
+<section class="experience-section bg-light text-light py-5" id="experience">
   <div class="container my-5">
-    <h2 class="text-center mb-5">Experience</h2>
-    <div class="experience-card mb-4">
+    <h2 class="text-center mb-5 text-dark" style="font-family: Protest Guerrilla, system-ui;">Experience</h2>
+    <div class="experience-card mb-4 bg-dark text-light">
       <div class="card-body p-5">
         <h3 class="experience-title">Web Developer - Dr.MCET</h3>
         <p><strong>Summary of Project:</strong> Child Birth Care Platform, developed an efficient and user-friendly interface to conduct online Lamaze classes.</p>
@@ -280,7 +326,7 @@
         <p class="card-text"><small class="text-muted">Apr 2024 - Jul 2024</small></p>
       </div>
     </div>
-    <div class="experience-card mb-4">
+    <div class="experience-card mb-4 bg-dark text-light">
       <div class="card-body p-5">
         <h3 class="experience-title">Java Development - Oasis Infobyte</h3>
         <p><strong>Summary of Project:</strong> Worked on some assigned projects with database connectivity.</p>
@@ -294,9 +340,9 @@
 
 
 
-<section class="certification-section bg-gradient-cert text-light py-5" id="certification">
+<section class="certification-section bg-dark text-light py-5" id="certification">
   <div class="container">
-    <h2 class="text-center mb-5">Certification</h2>
+    <h2 class="text-center mb-5" style="font-family: Protest Guerrilla, system-ui;">Certification</h2>
     <div id="certCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
