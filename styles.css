@@ -15,21 +15,21 @@
 .nav-link {
   position: relative;
   transition: color 0.3s ease-in-out;
-  font-family: "Roboto", system-ui;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: 700;
   font-style: normal;
   width: 100px;
   text-align: center;
   border-radius: 20px;
-  padding: 10px;
+  padding: 5px;
 }
 
 .nav-link::after {
   content: "";
   position: absolute;
-  width: 0%;
+  width: 100%;
   height: 2px;
-  background-color: #50e3c2; /* Turquoise Green */
+  background-color: #ffffff; /* Turquoise Green */
   bottom: -3px;
   left: 0;
   transition: width 0.3s ease-in-out;
@@ -37,7 +37,7 @@
 
 .nav-link:hover {
   color: #50e3c2; /* Turquoise Green on Hover */
-  background-image: linear-gradient(to bottom right, #4A90E2, #50E3C2);
+  background-image: linear-gradient(to bottom right, #000000, #50E3C2);
 }
 
 .nav-link:hover::after {
@@ -46,17 +46,19 @@
 
 /* Button */
 #btnn {
+  border: 2px solid white;
   border-color: #ffffff;
   color: #ffffff;
-  background-color: black;
+  /* background-color: rgb(255, 255, 255); */
+  background: url(./img/hack2.gif);
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  width: 250px;
+  width: 200px;
   font-weight: bold;
 }
 
 #btnn:hover {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 /* Hero Section */
@@ -91,7 +93,7 @@
   animation: fadeInUp 1s ease-in-out forwards;
   animation-delay: 0.005s; /* First element, 0.5s delay */
   visibility: visible;
-  font-family: "Protest Guerrilla", system-ui;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: 400;
   font-style: normal;
   color: black;
@@ -101,10 +103,10 @@
   animation: fadeInUp 1s ease-in-out forwards;
   animation-delay: 0.005s; /* Second element, 1s delay */
   visibility: visible;
-  font-family: "Roboto", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  color: black;
+  color: #ffffff;
+  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 40px #39ff14;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: large;
 
 }
 
@@ -112,7 +114,7 @@
   animation: fadeInUp 1s ease-in-out forwards;
   animation-delay: 0.5s; /* Third element, 1.5s delay */
   visibility: visible;
-  font-family: "Roboto", system-ui;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: 700;
   font-style: normal;
 
@@ -126,7 +128,7 @@
 
 .hero-section {
   /* background: linear-gradient(to bottom right, #4a90e2, #50e3c2); */
-  background: url(./img/banner\ copy.png);
+  background: url(./img/bg.gif);
   background-repeat: no-repeat;
   width: 100%;
   background-size: cover;
@@ -151,7 +153,6 @@
 /* Image */
 /* Image */
 #frameimg img {
-  border: 5px solid #fff;
   border-radius: 50%; /* Make the image round */
   transition: transform 0.3s ease-in-out;
 }
@@ -162,159 +163,21 @@
 }
 /* About Section */
 
-/* Overall container for the about section */
-.about-section {
-  background-color: #f8f9fa; /* Light gray background */
-  padding: 60px 0;
-  color: #333;
-  font-family: "Roboto", system-ui;
-  font-weight: 400;
-  font-style: normal;
-
-}
-
-.about-section h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #007bff; /* Professional blue */
-  margin-bottom: 40px;
-  font-family: "Roboto", system-ui;
-  font-weight: 400;
-  font-style: normal;
-
-}
 
 
-.highlight-card {
-  position: relative;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out;
-}
-
-.highlight-card:hover {
-  transform: translateY(-10px);
-}
-
-.highlight-icon {
-  font-size: 3rem;
-  color: #007bff; /* Change color as needed */
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
-
-.highlight-title {
-  margin-top: 80px; /* Adjust according to the icon size and position */
-}
 
 
-/* For the cards */
-.highlight-card {
-  background-color: #ffffff; /* White background for cards */
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  padding: 70px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  opacity: 0;
-  transform: translateX(-100px); /* Initially off the screen */
-  font-family: "Roboto", system-ui;
-  font-weight: 400;
-  font-style: normal;
 
-}
 
-.highlight-card:hover {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow on hover */
-  transform: translateY(-10px); /* Lift on hover */
-}
 
-/* Make cards appear in two columns */
-@media (min-width: 768px) {
-  .highlight-card {
-    transform: translateX(0); /* Reset for wider screens */
-    opacity: 1;
-    margin-bottom: 30px;
-  }
-}
 
-/* Add hover effect for buttons */
-.custom-btn {
-  background-color: #007bff;
-  border-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease;
-}
 
-.custom-btn:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-}
 
-/* Animation on scroll */
-.fade-in {
-  opacity: 1;
-  transform: translateX(0); /* Card enters from the side */
-}
 
-@media (max-width: 767px) {
-  .highlight-card {
-    transform: translateX(0);
-  }
-}
-/* Initial state: Hidden and positioned far to the left or right */
-.highlight-card {
-  opacity: 0;
-  transform: translateX(-150px); /* Initially moved left */
-  transition: opacity 0.4s ease, transform 0.4s ease; /* Speed up the transition */
-}
-
-/* Move from left for the first column */
-.fade-in-left {
-  opacity: 1;
-  transform: translateX(0); /* Move the card into view */
-}
-
-/* Move from right for the second column */
-.fade-in-right {
-  opacity: 1;
-  transform: translateX(0); /* Move the card into view */
-}
-
-/* Staggered animation delays for each card */
-.highlight-card:nth-child(1) {
-  transition-delay: 0.1s;
-}
-.highlight-card:nth-child(2) {
-  transition-delay: 0.2s;
-}
-.highlight-card:nth-child(3) {
-  transition-delay: 0.3s;
-}
-.highlight-card:nth-child(4) {
-  transition-delay: 0.4s;
-}
-.highlight-card:nth-child(5) {
-  transition-delay: 0.5s;
-}
-.highlight-card:nth-child(6) {
-  transition-delay: 0.6s;
-}
 
 /* General Styles for the Skills Section */
 /* Basic skill card styles */
-.skill-card {
-  background: linear-gradient(45deg, #ffffff, #f0f0f0);
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-}
+
 
 /* Bouncing animation */
 @keyframes bounce {
@@ -333,12 +196,14 @@
   }
 }
 
-/* Apply bounce on hover */
-.skill-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
+/* #skills{
+  background: url(./img/bg.gif);
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  color: #fff;
+  padding: 80px 0;
+} */
 /* Animation on skill icons */
 .skill-icon {
   animation: bounce 2s infinite;
@@ -361,52 +226,95 @@
   color: #28a745;
 }
 
-/* Skill card title */
-.skill-card h5 {
-  font-size: 1.2rem;
-  margin-top: 10px;
-  font-weight: bold;
-  color: #333;
+/* Stars background */
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://cdn.pixabay.com/photo/2015/09/18/19/12/space-942220_960_720.jpg') no-repeat center center fixed;
+  background-size: cover;
+  z-index: -1;
+  animation: starryBackground 30s linear infinite;
 }
 
-/* Skill card text */
-.skill-card p {
-  font-size: 0.9rem;
-  color: #666;
+@keyframes starryBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 100%;
+  }
 }
 
-/* Skill card hover effects */
+/* Section Styling */
+#skills {
+  padding: 80px 0;
+  color: #00ff00;
+  font-family: 'Courier New', Courier, monospace;
+  position: relative;
+}
+
+/* Section Title */
+#skills h2 {
+
+  color: #39ff14;
+  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 15px #39ff14;
+  margin-bottom: 50px;
+}
+
+/* Skill Card Styling */
+.skill-card {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid #39ff14;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 0 10px #39ff14;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #39ff14;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Skill Icon Styling */
+.skill-icon {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for icons */
 .skill-card:hover .skill-icon {
-  animation: none; /* Stop bouncing on hover */
-  transform: scale(1.2); /* Slightly increase icon size */
+  transform: scale(1.1);
+  color: #39ff14;
 }
 
-/* Background Gradient for Projects Section */
-.bg-gradient-pink {
-  background: linear-gradient(
-    135deg,
-    #ff9a9e,
-    #fad0c4
-  ); /* Pink gradient background */
+/* Skill Title */
+.skill-card h5 {
+  font-size: 1.5rem;
+  color: #39ff14;
+  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
+  margin-top: 15px;
+}
+
+/* Skill Description */
+.skill-card p {
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .skill-card {
+    margin-bottom: 15px;
+  }
 }
 
 /* Project Card Styles */
-/* Card container styling */
-.card {
-  border: none; /* Remove default border */
-  border-radius: 15px; /* Rounded corners */
-  overflow: hidden; /* Ensure content does not overflow card boundaries */
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
-  background-color: #000000; /* White background for cards */
-  position: relative; /* Position relative for pseudo-elements */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-/* Card hover effect */
-.card:hover {
-  transform: translateY(-10px); /* Lift card on hover */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
-}
 
 /* Card image styling */
 .project-img {
@@ -416,9 +324,9 @@
 }
 
 /* Image hover effect */
-.card:hover .project-img {
+/* .card:hover .project-img {
   transform: scale(1.05); /* Slightly zoom in image on hover */
-}
+
 
 /* Card body styling */
 .card-body {
@@ -426,121 +334,154 @@
 }
 
 /* Project title styling */
-.project-title {
-  font-family: 'Protest Guerrilla', system-ui; /* Custom font */
-  font-size: 1.75rem; /* Title size */
-  color: #333; /* Dark text color */
-  margin-bottom: 0.75rem; /* Space below title */
-  font-weight: bold; /* Bold title text */
+/* Section Background */
+#project-section {
+  background-color: #000;
 }
 
-/* Project description styling */
+/* Neon Text Effect */
+.text-neon {
+  color: #39ff14;
+  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 40px #39ff14;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Card Styling */
+.hacker-card {
+  border: 2px solid #39ff14;
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hacker-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #39ff14, 0 0 30px #39ff14;
+}
+
+
+
+/* Project Description */
 .project-description {
-  font-size: 1rem; /* Description size */
-  color: #555; /* Slightly lighter text color */
-  margin-bottom: 1rem; /* Space below description */
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
-/* Project description styling */
-
-
-.projects-section .card:hover{
-  background-color: #d1c9c9;
+/* Button Styling */
+/* Default Button Style (same as hover effect) */
+.btn-outline-neon {
+  border-color: #39ff14;
+  background: url(./img/hack2.gif);
+  font-weight: bold;
+  color: #000;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0 0 10px #39ff14;
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-/* Button styling */
-.btn-outline-primary {
-  border-color: #ff7e5f; /* Border color */
-  color: #ff7e5f; /* Text color */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for button hover */
-  border-radius: 25px; /* Rounded button corners */
+/* Button Hover Effect (same as default now) */
+.btn-outline-neon:hover {
+  background-color: #39ff14;
+  color: #000;
+  box-shadow: 0 0 10px #39ff14;
 }
 
-.btn-outline-primary:hover {
-  background-color: #ff7e5f; /* Background color on hover */
-  color: #ffffff; /* Text color on hover */
+
+/* Section Background */
+#experience-section {
+  background: url(./img/bg2.gif);
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  color: #fff;
+  padding: 80px 0;
 }
 
-/* Text-muted styling */
-.text-muted {
-  color: #777; /* Muted text color */
+#experience-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0, 255, 128, 0.1) 0%, transparent 70%);
+  z-index: 0;
+  animation: pulse 4s infinite alternate;
 }
 
-/* Responsive image styling */
-@media (max-width: 767.98px) {
-  .project-img {
-      width: 100%; /* Ensure image fills container on small screens */
-  }
+/* Neon Text */
+.text-neon {
+  color: #0f0;
+  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+  font-family: "Courier New", Courier, monospace;
 }
 
-/* Background Gradient for Experience Section */
-
-
-/* Experience Card Styles */
+/* Experience Card */
 .experience-card {
-  border-radius: 8px;
-  background-color: #ffffff; /* Light background for the card */
-  color: #000000; /* Dark text color for readability */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  background: rgba(20, 20, 20, 0.9);
+  border: 2px solid #00ff00;
+  border-radius: 10px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .experience-card:hover {
-  transform: scale(1.04);
-  /* Slight lift on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 0, 0.6), 0 0 35px rgba(0, 255, 0, 0.4);
 }
 
+/* Neon Line */
+.neon-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(180deg, #00ff00, rgba(0, 255, 0, 0.3));
+  animation: glow-line 2s infinite;
+}
+
+@keyframes glow-line {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+/* Title and Text Styles */
 .experience-title {
-  color: #f48fb1; /* Light pink for titles */
-  font-size: 1.5rem; /* Larger font size for titles */
+  font-family: "Courier New", Courier, monospace;
+  color: #fff;
+  text-shadow: 0 0 5px #00ff00, 0 0 15px #00ff00;
+  margin-bottom: 15px;
 }
 
-.card-body {
-  padding: 2rem; /* Increased padding for better spacing */
+.card-text small {
+  color: rgba(255, 255, 255, 0.7);
 }
 
-.card-text small.text-muted {
-  color: #aaa; /* Lighter gray for dates */
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;
 }
 
-/* Background Gradient for Certification Section */
-.bg-gradient-cert {
-  background: linear-gradient(
-    135deg,
-    #ff9a9e,
-    #fad0c4
-  ); /* Pink gradient background */
-}
-
-/* Carousel Image Styles */
-.cert-img {
-  border-radius: 8px; /* Rounded corners for images */
-}
-
-/* Title Styles */
-.cert-title {
-  text-align: center;
-  color: #d81b60; /* Deep pink for certificate titles */
-  font-size: 1.25rem; /* Adjusted font size for better readability */
-  margin-top: 10px; /* Space above the title */
-}
-
-/* Mobile View Adjustments */
-@media (max-width: 768px) {
-  .carousel-item {
-    text-align: center;
+/* Pulsing Background Animation */
+@keyframes pulse {
+  from {
+    opacity: 0.1;
   }
-  .carousel-item .row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .carousel-item .col-md-4 {
-    flex: 0 0 100%; /* Full width on mobile */
-    max-width: 100%; /* Ensures the image takes full width */
+  to {
+    opacity: 0.3;
   }
 }
+
 
 /* General styles for the contact section */
 .contact-section {
@@ -592,3 +533,156 @@
   height: 100%;
   border: 0;
 }
+
+
+/* General Section Styling */
+#dynamic-gallery {
+  background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+}
+
+.text-neon {
+  color: #0f0;
+  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.btn-view {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #00ff00;
+  color: #000;
+  border: none;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn-view:hover {
+  background: #0f0;
+  box-shadow: 0 0 10px #00ff00;
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 70%;
+  max-width: 700px;
+  border: 5px solid #0f0;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #ff0000;
+}
+
+/* Responsive Modal */
+@media screen and (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+  }
+}
+/* Contact Section Styling */
+.text-neon {
+  color: #08fdd8;
+  text-decoration: none;
+}
+
+.text-neon:hover {
+  color: #0fffcf;
+  text-decoration: underline;
+}
+
+.btn-neon {
+  border-color: #0fffcf;
+  background-color: #0fffcf;
+  color: #000;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0 0 10px #0fffcf;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  background: url(./img/hack2.gif);
+  font-weight: bold;
+}
+
+.btn-neon:hover {
+  background-color: #0fffcf;
+  box-shadow: 0 40 10px #0fffcf;
+  color: #000;
+}
+
+.neon-form .form-control {
+  background-color: transparent;
+  border: 2px solid #08fdd8;
+  color: #fff;
+}
+
+.neon-form .form-control:focus {
+  background-color: transparent;
+  border-color: #0fffcf;
+  box-shadow: 0 0 10px #0fffcf;
+}
+
+.neon-form label {
+  color: #08fdd8;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+
+
+.container{
+  font-family: 'Courier New', Courier, monospace;
+}
+
