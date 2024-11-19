@@ -11,6 +11,8 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet "href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+rel="stylesheet">
 
 <!-- Bootstrap Bundle with Popper (for collapse functionality) -->
 
@@ -21,7 +23,7 @@
   
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-secondary border-bottom border-body text-light fixed-top" data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body text-light fixed-top" data-bs-theme="dark">
     <div class="container-fluid">
       <a class="navbar-brand text-light" href="#">Udhayan Portfolio</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,10 +50,10 @@
             <a class="nav-link text-light" href="#certification">Certification</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href="#">Contact Us</a>
+            <a class="nav-link text-light" href="#">Contact</a>
           </li>
         </ul>
-        <a class="btn " id="btnn" href="assets/Resume-Udhayan.pdf" target="_blank">Resume</a>
+        <a class="btn " id="btnn" href="assets/Udhayan_Resume.pdf" target="_blank">Resume</a>
       </div>
     </div>
   </nav>
@@ -61,13 +63,13 @@
       <div class="row align-items-center">
         <div class="col-lg-7 mb-4 mb-lg-0">
           <div class="typing-container">
-            <h1 class="typing fs-1 ">Welcome to Udhayan's Portfolio</h1>
-            <p class="text">I’m Udhayan, a BE candidate in Computer Science and Engineering (CSE) with a strong passion for web development. I have experience in executing projects and am currently advancing my skills in Java development and full stack technologies. I have a proven ability to collaborate effectively in multidisciplinary teams to deliver innovative solutions.</p>
-            <a href="#projects" class="btn btn-primary btn-lg mt-3 custom-btn">Explore My Work</a>
+            <h1 class="typing fs-1 text-light">Let's explore about me!!</h1>
+            <p class="text fs-5 p-3 text-neon" style="backdrop-filter: blur(3px);border-radius: 30px;">Hello, my valuable visitors! Let me share a little about myself. I'm a BE candidate with a strong passion for web development and Java technologies. I have experience working on projects in various domains. Currently, I am eagerly working to advance my skills and deepen my technical knowledge.</p>
+            <a href="#projects" class="btn btn-dark btn-lg mt-3 custom-btn btn-outline-neon">Explore My Work</a>
           </div>
         </div>
         <div class="col-lg-5" id="frameimg">
-          <img src="img/udhayan.jpg" class="img-fluid rounded-circle shadow-lg hover-shadow" alt="Udhayan">
+          <img src="img/udhayan-removebg-preview.png" style="backdrop-filter: blur(5px);box-shadow: 0 0 25px rgba(0, 255, 0, 1), 0 0 35px rgba(0, 255, 0, 0.7);"class="img-fluid " alt="Udhayan">
         </div>
       </div>
     </div>
@@ -76,80 +78,70 @@
   
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+<hr>
     
 
-  <section class="about-section bg-dark" id="about">
+  <section id="education-section" class="py-5 bg-dark text-light">
     <div class="container">
-        <h2 class="text-center mb-5" style="font-family: Protest Guerrilla, system-ui; color: white;">About Me</h2>
-        <p class="fs-5 text-center mb-5 about-text text-light">
-            I’m Udhayan, a BE candidate in Computer Science and Engineering (CSE) with a deep passion for web development. I have a proven track record of delivering innovative solutions in multidisciplinary teams. Here are a few key highlights about me:
-        </p>
-        
-        <div class="row">
-            <!-- First column: Cards will slide in from the left -->
-            <div class="col-lg-6 col-md-12">
-                <div class="highlight-card p-4">
-                    <i class="fas fa-code highlight-icon"></i>
-                    <h4 class="highlight-title text-primary">Full Stack Development</h4>
-                    <p class="highlight-text">Experience in building responsive and dynamic web applications using modern frameworks like React and Spring Boot.</p>
-                </div>
-                <div class="highlight-card p-4">
-                    <i class="fas fa-java highlight-icon"></i>
-                    <h4 class="highlight-title text-primary">Java Expertise</h4>
-                    <p class="highlight-text">Strong proficiency in Java, with hands-on experience in developing backend solutions and integrating with databases like MySQL.</p>
-                </div>
+      <h2 class="text-center mb-5 text-neon">My Education</h2>      <div class="row g-4">
+        <!-- High School Card -->
+        <div class="col-md-4 py-5">
+          <div class="skill-card ">
+            <div class="card-body text-center">
+              <div class="education-icon mb-3">
+                <i class="bi bi-mortarboard display-4 text-primary"></i>
+              </div>
+              <h5 class="card-title">Secondary School</h5>
+              <p class="card-text">
+                Indian Matric Higher Secondary School<br />
+                <small>2019 - 2020</small>
+              </p>
             </div>
-
-            <!-- Second column: Cards will slide in from the right -->
-            <div class="col-lg-6 col-md-12">
-                <div class="highlight-card p-4">
-                    <i class="fas fa-project-diagram highlight-icon"></i>
-                    <h4 class="highlight-title text-primary">Real-time Project Experience</h4>
-                    <p class="highlight-text">Worked on a real-time project developing a child birth care platform for a US client, focusing on frontend development and payment integration.</p>
-                </div>
-                <div class="highlight-card p-4">
-                    <i class="fas fa-paint-brush highlight-icon"></i>
-                    <h4 class="highlight-title text-primary">Creative Frontend Developer</h4>
-                    <p class="highlight-text">Skilled in creating visually appealing and user-friendly interfaces using HTML, CSS, and JavaScript, React JS ensuring a seamless user experience.</p>
-                </div>
-            </div>
+          </div>
         </div>
+        
+        <!-- Higher Secondary Card -->
+        <div class="col-md-4 py-5">
+          <div class="skill-card">
+            <div class="card-body text-center">
+              <div class="education-icon mb-3">
+                <i class="bi bi-book display-4 text-success"></i>
+              </div>
+              <h5 class="card-title">Higher Secondary</h5>
+              <p class="card-text">
+                Indian Matric Higher Secondary School<br />
+                <small>2021 - 2022</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Engineering Card -->
+        <div class="col-md-4 py-5">
+          <div class="skill-card">
+            <div class="card-body text-center">
+              <div class="education-icon mb-3">
+                <i class="bi bi-gear display-4 text-warning"></i>
+              </div>
+              <h5 class="card-title">Engineering</h5>
+              <p class="card-text">
+                Dr. Mahalingam College of Engineering and Technology<br />
+                <small>2022 - 2026</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-  const leftCards = document.querySelectorAll(".col-lg-6:nth-child(1) .highlight-card");
-  const rightCards = document.querySelectorAll(".col-lg-6:nth-child(2) .highlight-card");
-
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          if (entry.target.closest('.col-lg-6:nth-child(1)')) {
-            entry.target.classList.add("fade-in-left");
-          } else if (entry.target.closest('.col-lg-6:nth-child(2)')) {
-            entry.target.classList.add("fade-in-right");
-          }
-          observer.unobserve(entry.target); // Stop observing once it's in view
-        }
-      });
-    },
-    { threshold: 0.1 } // Trigger when 10% of the element is in view
-  );
-
-  // Observe each card
-  leftCards.forEach((card) => observer.observe(card));
-  rightCards.forEach((card) => observer.observe(card));
-});
-
-  </script>
+  </section>
+  
+  <hr>
   
 
   <section id="skills">
-    <div class="stars"></div> <!-- Stars background -->
-    <div class="container py-5">
-      <h2 class="text-center mb-5" style="font-family: Protest Guerrilla, system-ui;">My Skills</h2>
+    <div class="stars bg-dark"></div> <!-- Stars background -->
+    <div class="container">
+      <h2 class="text-center mb-5 text-neon">My Skills</h2>
       <div class="row text-center justify-content-center">
         <div class="col-md-3 mb-4">
           <div class="skill-card p-4">
@@ -212,247 +204,290 @@
   </section>
   
 
+<hr>
 
-<section class="projects-section bg-dark text-light py-5" id="projects">
-  <div class="container">
-    <h2 class="text-center mb-5" style="font-family: Protest Guerrilla, system-ui;">Projects</h2>
 
-    <!-- Project 1 -->
-    <div class="card project-card mb-4">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src="img/project1.png" class="img-fluid project-img" alt="Pregnancy Care Platform">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body p-5">
-            <h3 class="project-title">Pregnancy Care Platform</h3>
-            <p class="project-description">Developed a comprehensive pregnancy care platform designed for conducting online Lamaze classes. The project aimed to provide an efficient and user-friendly interface for expecting parents.</p>
-            <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
-            <p class="text-muted"><small>Apr 2024 - Jul 2024</small></p>
-            <a href="https://arthilamazeclass.com/" class="btn btn-outline-primary">Visit Site</a>
+  <section id="project-section" class="py-5 text-light">
+    <div class="container">
+      <h2 class="text-center mb-5 text-neon">My Projects</h2>
+      
+      <!-- First Project Card in Single Row -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="skill-card bg-dark text-light hacker-card mb-4">
+            <div class="row no-gutters">
+              <!-- Image Column -->
+              <div class="col-md-4">
+                <img src="./img/project1.png" alt="Pregnancy Care Platform" class="card-img">
+              </div>
+              <!-- Project Details Column -->
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h3 class="project-title text-neon">Pregnancy Care Platform</h3>
+                  <p class="project-description">
+                    Developed a comprehensive pregnancy care platform designed for conducting online Lamaze classes. The project aimed to provide an efficient and user-friendly interface for expecting parents.
+                  </p>
+                  <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript, PHP, MySQL, Paypal</p>
+                  <p class="text-muted"><small>Apr 2024 - Jul 2024</small></p>
+                  <a href="https://arthilamazeclass.com/" class="btn btn-outline-neon text-light">Visit Site</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- Project 2 -->
-    <div class="card project-card mb-4">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src="img/project2.png" class="img-fluid project-img" alt="Event Registration Website">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body p-5">
-            <h3 class="project-title">Event Registration Website for College Symposium</h3>
+  
+      <!-- Second Project Card in Single Row -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="skill-card bg-dark text-light hacker-card mb-4">
+            <div class="row no-gutters">
+              <!-- Image Column -->
+              <div class="col-md-4">
+                <img src="./img/project2.png" alt="Cyber Security Tool" class="card-img">
+              </div>
+              <!-- Project Details Column -->
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h3 class="project-title text-neon">Event Registration Website for College Symposium</h3>
             <p class="project-description">Developed a dynamic website to efficiently collect and manage event registration details for a college symposium. The project included user-friendly interfaces and registration forms.</p>
             <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript</p>
             <p class="text-muted"><small>Apr 2024</small></p>
-            <a href="https://udhayans.github.io/DigiFest/" class="btn btn-outline-primary">Visit Site</a>
+            <a href="https://udhayans.github.io/DigiFest/" class="btn btn-outline-neon text-light">Visit Site</a>
+          </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- Project 3 -->
-    <div class="card project-card mb-4">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src="img/Screenshot 2024-09-08 183949.png" class="img-fluid project-img" alt="Book Management System">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body p-5">
-            <h3 class="project-title">Book Management System</h3>
+  
+      <!-- Third Project Card in Single Row -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="skill-card bg-dark text-light hacker-card mb-4">
+            <div class="row no-gutters">
+              <!-- Image Column -->
+              <div class="col-md-4">
+                <img src="./img/Screenshot 2024-09-08 183949.png" alt="Dark Web Analyzer" class="card-img">
+              </div>
+              <!-- Project Details Column -->
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h3 class="project-title text-neon">Book Management System</h3>
             <p class="project-description">Developed a comprehensive Book Management System using Spring Boot and Hibernate to handle various book-related operations through REST APIs.</p>
             <p><strong>Technologies Used:</strong> Spring Boot, Hibernate</p>
             <p class="text-muted"><small>Apr 2024 - Jul 2024</small></p>
             
           </div>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- Project 4 -->
-    <div class="card project-card mb-4">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src="img/image copy.png" class="img-fluid project-img" alt="Book Management System">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body p-5">
-            <h3 class="project-title">Complete User Authentication</h3>
-            <p class="project-description">Developed a user authentication portal with help of React JS and Firebase DB then deployed with vercel software.</p>
-            <p><strong>Technologies Used:</strong> React JS, Firebase</p>
-            <p class="text-muted"><small>July 2024 </small></p>
-            <a href="https://react-firebase-topaz-nine.vercel.app/" class="btn btn-outline-primary">Visit Site</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
-
-    <!-- Project 5 -->
-    <div class="card project-card mb-4">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src="img/image.png" class="img-fluid project-img" alt="Book Management System">
+  
+      <!-- Fourth Project Card in Single Row -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="skill-card bg-dark text-light hacker-card mb-4">
+            <div class="row no-gutters">
+              <!-- Image Column -->
+              <div class="col-md-4">
+                <img src="img/image copy.png" alt="Ethical Hacking Framework" class="card-img">
+              </div>
+              <!-- Project Details Column -->
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h3 class="project-title text-neon">Complete User Authentication</h3>
+                  <p class="project-description">Developed a user authentication portal with help of React JS and Firebase DB then deployed with vercel software.</p>
+                  <p><strong>Technologies Used:</strong> React JS, Firebase</p>
+                  <p class="text-muted"><small>July 2024 </small></p>
+                  <a href="https://react-firebase-topaz-nine.vercel.app/" class="btn btn-outline-neon text-light">Visit Site</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-md-8">
-          <div class="card-body p-5">
-            <h3 class="project-title">Shift Log Management</h3>
+      </div>
+  
+      <!-- Fifth Project Card in Single Row -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="skill-card bg-dark text-light hacker-card mb-4">
+            <div class="row no-gutters">
+              <!-- Image Column -->
+              <div class="col-md-4">
+                <img src="img/image.png" alt="Network Threat Detector" class="card-img">
+              </div>
+              <!-- Project Details Column -->
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h3 class="project-title text-neon">Shift Log Management</h3>
             <p class="project-description">A small prototype developed to participate in Smart India Hackathon. It gets the data from supervisor and stores in databse and generated as Pdf</p>
             <p><strong>Technologies Used:</strong> React, Bootstrap, Firebase</p>
             <p class="text-muted"><small>Aug 2024 </small></p>
-            <a href="https://entry-ivory.vercel.app/" class="btn btn-outline-primary">Visit Site</a>
+            <a href="https://entry-ivory.vercel.app/" class="btn btn-outline-neon text-light">Visit Site</a>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-<section class="experience-section bg-light text-light py-5" id="experience">
-  <div class="container my-5">
-    <h2 class="text-center mb-5 text-dark" style="font-family: Protest Guerrilla, system-ui;">Experience</h2>
-    <div class="experience-card mb-4 bg-dark text-light">
-      <div class="card-body p-5">
-        <h3 class="experience-title">Web Developer - Dr.MCET</h3>
-        <p><strong>Summary of Project:</strong> Child Birth Care Platform, developed an efficient and user-friendly interface to conduct online Lamaze classes.</p>
-        <p><strong>Key Responsibilities:</strong> Focused on frontend development and payment integration for web applications.</p>
-        <p><strong>Technologies and Tools:</strong> HTML, CSS, JavaScript, PHP, MySQL, Visual Studio, PayPal, Git.</p>
-        <p class="card-text"><small class="text-muted">Apr 2024 - Jul 2024</small></p>
-      </div>
-    </div>
-    <div class="experience-card mb-4 bg-dark text-light">
-      <div class="card-body p-5">
-        <h3 class="experience-title">Java Development - Oasis Infobyte</h3>
-        <p><strong>Summary of Project:</strong> Worked on some assigned projects with database connectivity.</p>
-        <p><strong>Technologies and Tools:</strong> Java, MySQL, Eclipse, GitHub.</p>
-        <p class="card-text"><small class="text-muted">Feb 2024 - Mar 2024</small></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-<section class="certification-section bg-dark text-light py-5" id="certification">
-  <div class="container">
-    <h2 class="text-center mb-5" style="font-family: Protest Guerrilla, system-ui;">Certification</h2>
-    <div id="certCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="row">
-            <div class="col-md-4">
-              <img src="img/certificates/Coursera Web design project.jpeg" alt="Coursera" class="d-block w-100 cert-img">
-              <h3 class="cert-title">Coursera</h3>
-            </div>
-            <div class="col-md-4">
-              <img src="img/certificates/Forage job stimulation_page-0001.jpg" alt="Forage" class="d-block w-100 cert-img">
-              <h3 class="cert-title">Forage</h3>
-            </div>
-            <div class="col-md-4">
-              <img src="img/certificates/Guvi Interview preparation.png" alt="Guvi" class="d-block w-100 cert-img">
-              <h3 class="cert-title">Guvi</h3>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="row">
-            <div class="col-md-4">
-              <img src="img/certificates/Hacker rank intern.jpg" alt="Hacker Rank" class="d-block w-100 cert-img">
-              <h3 class="cert-title">Hacker Rank</h3>
-            </div>
-            <div class="col-md-4">
-              <img src="img/certificates/Hacker rank java.jpg" alt="Hacker Rank" class="d-block w-100 cert-img">
-              <h3 class="cert-title">Hacker Rank</h3>
-            </div>
-            <div class="col-md-4">
-              <img src="img/certificates/iot.jpg" alt="Cisco" class="d-block w-100 cert-img">
-              <h3 class="cert-title">Cisco</h3>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="row">
-            <div class="col-md-4">
-              <img src="img/certificates/Java.jpg" alt="Nptel" class="d-block w-100 cert-img">
-              <h3 class="cert-title">Nptel</h3>
-            </div>
-            <div class="col-md-4">
-              <img src="img/certificates/Python.jpg" alt="Nptel" class="d-block w-100 cert-img">
-              <h3 class="cert-title">Nptel</h3>
-            </div>
-            <div class="col-md-4">
-              <img src="img/certificates/1-22807d77-8164-4b11-b8ea-29d01968169f_page-0001.jpg" alt="Infoses Springboard" class="d-block w-100 cert-img">
-              <h3 class="cert-title">Infoses Springboard</h3>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="row">
-            <div class="col-md-4">
-              <img src="img/certificates/spring boot.jpg" alt="Udemy" class="d-block w-100 cert-img">
-              <h3 class="cert-title">Udemy</h3>
-            </div>
-            <div class="col-md-4">
-              <img src="img/certificates/Udemy Marketing physiology_page-0001.jpg" alt="Udemy" class="d-block w-100 cert-img">
-              <h3 class="cert-title">Udemy</h3>
-            </div>
-            <div class="col-md-4">
-              <img src="img/certificates/1-df2792af-e593-47fd-bfb0-0827a0958822_page-0001.jpg" alt="Infoses Springboard" class="d-block w-100 cert-img">
-              <h3 class="cert-title">Infoses Springboard</h3>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#certCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#certCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+  
+      
     </div>
-  </div>
-</section>
+  </section>
+  
+  
 
-<section class="contact-section bg-light text-dark py-5" id="contact">
-  <div class="container">
-      <h2 class="text-center mb-4 text-primary">Contact Us</h2>
+<hr>
+
+  <section id="experience-section" class="py-5 bg-dark text-light">
+    <div class="container">
+      <h2 class="text-center text-neon mb-5">My Experience</h2>
       <div class="row">
-          <!-- Contact Information Column -->
-          <div class="col-md-6 mb-3">
-              <div class="contact-item mb-4">
-                  <i class="fas fa-map-marker-alt fa-2x mb-2 text-primary"></i>
-                  <h4 class="mb-1">Address</h4>
-                  <p>Morappur, Dharmapuri</p>
-              </div>
-              <div class="contact-item mb-4">
-                  <i class="fas fa-phone-alt fa-2x mb-2 text-primary"></i>
-                  <h4 class="mb-1">Phone</h4>
-                  <p>+91 9944763361</p>
-              </div>
-              <div class="contact-item mb-4">
-                  <i class="fas fa-envelope fa-2x mb-2 text-primary"></i>
-                  <h4 class="mb-1">Email</h4>
-                  <p>sudhayan2@gmail.com</p>
-              </div>
+        <!-- Experience 1 -->
+        <div class="col-12 mb-4">
+          <div class="experience-card p-4 position-relative">
+            <div class="neon-line"></div>
+            <h3 class="experience-title">Shanmuga Technovative Solutions</h3>
+            <p><strong>Summary of Project:</strong> Child Birth Care Platform, developed an efficient and user-friendly interface to conduct online Lamaze classes.</p>
+            <p><strong>Key Responsibilities:</strong> Focused on frontend development and payment integration for web applications.</p>
+            <p><strong>Technologies and Tools:</strong> HTML, CSS, JavaScript, PHP, MySQL, Visual Studio, PayPal, Git.</p>
+            <p class="card-text"><small class="text-muted">Apr 2024 - Jul 2024</small></p>
           </div>
-          <!-- Map Column -->
-          <div class="col-md-6 mb-3">
-              <div class="map-responsive">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d15603.264620802098!2d78.37352729330937!3d12.124728069806562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDA3JzQxLjYiTiA3OMKwMjInMjcuOCJF!5e0!3m2!1sen!2sin!4v1723995711850!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
+        </div>
+        <!-- Experience 2 -->
+        <div class="col-12 mb-4">
+          <div class="experience-card p-4 position-relative">
+            <div class="neon-line"></div>
+            <h3 class="experience-title">Java Development - Oasis Infobyte</h3>
+            <p><strong>Summary of Project:</strong> Worked on some assigned projects with database connectivity.</p>
+            <p><strong>Technologies and Tools:</strong> Java, MySQL, Eclipse, GitHub.</p>
+            <p class="card-text"><small class="text-muted">Feb 2024 - Mar 2024</small></p>
           </div>
+        </div>
       </div>
-  </div>
-</section>
+    </div>
+  </section>
+  
+<hr>
+  <section id="dynamic-gallery" class="py-5 bg-dark text-light">
+    <div class="container">
+      <h2 class="text-center text-neon mb-5">Certificate Gallery</h2>
+      <div class="gallery-grid">
+        <!-- Certificate 1 -->
+        <div class="gallery-item gallery-item-large">
+          <img src="img/certificates/Hacker rank intern.jpg" alt="Certificate 1" class="gallery-image" />
+          <button class="btn-view" onclick="openModal('img/certificates/Hacker rank intern.jpg')">View</button>
+        </div>
+        <!-- Certificate 2 -->
+        <div class="gallery-item gallery-item-small">
+          <img src="img/certificates/Java.jpg" alt="Certificate 2" class="gallery-image" />
+          <button class="btn-view" onclick="openModal('img/certificates/Java.jpg')">View</button>
+        </div>
+        <!-- Certificate 3 -->
+        <div class="gallery-item gallery-item-medium">
+          <img src="img/certificates/Coursera Web design project.jpeg" alt="Certificate 3" class="gallery-image" />
+          <button class="btn-view" onclick="openModal('img/certificates/Coursera Web design project.jpeg')">View</button>
+        </div>
+        <!-- Certificate 4 -->
+        <div class="gallery-item gallery-item-large">
+          <img src="img/certificates/Guvi Interview preparation.png" alt="Certificate 4" class="gallery-image" />
+          <button class="btn-view" onclick="openModal('img/certificates/Guvi Interview preparation.png')">View</button>
+        </div>
+        <!-- Certificate 5 -->
+        <div class="gallery-item gallery-item-medium">
+          <img src="img/certificates/iot.jpg" alt="Certificate 5" class="gallery-image" />
+          <button class="btn-view" onclick="openModal('img/certificates/iot.jpg')">View</button>
+        </div>
+        <!-- Certificate 6 -->
+        <div class="gallery-item gallery-item-small">
+          <img src="img/certificates/1-22807d77-8164-4b11-b8ea-29d01968169f_page-0001.jpg" alt="Certificate 6" class="gallery-image" />
+          <button class="btn-view" onclick="openModal('img/certificates/1-22807d77-8164-4b11-b8ea-29d01968169f_page-0001.jpg')">View</button>
+        </div>
+        <!-- Certificate 7 -->
+        <div class="gallery-item gallery-item-medium">
+          <img src="img/certificates/1-74dbeb3f-f00b-4c71-be31-7542b9930728_page-0001.jpg" alt="Certificate 7" class="gallery-image" />
+          <button class="btn-view" onclick="openModal('img/certificates/1-74dbeb3f-f00b-4c71-be31-7542b9930728_page-0001.jpg')">View</button>
+        </div>
+        <!-- Certificate 8 -->
+        <div class="gallery-item gallery-item-large">
+          <img src="img/certificates/Forage job stimulation_page-0001.jpg" alt="Certificate 8" class="gallery-image" />
+          <button class="btn-view" onclick="openModal('img/certificates/Forage job stimulation_page-0001.jpg')">View</button>
+        </div>
+        <!-- Certificate 9 -->
+        <div class="gallery-item gallery-item-large">
+          <img src="img/certificates/Hacker rank java.jpg" alt="Certificate 9" class="gallery-image" />
+          <button class="btn-view" onclick="openModal('img/certificates/Hacker rank java.jpg')">View</button>
+        </div>
+        <!-- Certificate 10 -->
+        <div class="gallery-item gallery-item-medium">
+          <img src="img/certificates/1-df2792af-e593-47fd-bfb0-0827a0958822_page-0001.jpg" alt="Certificate 10" class="gallery-image" />
+          <button class="btn-view" onclick="openModal('img/certificates/1-df2792af-e593-47fd-bfb0-0827a0958822_page-0001.jpg')">View</button>
+        </div>
+        <!-- Certificate 11 -->
+        <div class="gallery-item gallery-item-large">
+          <img src="img/certificates/Python.jpg" alt="Certificate 11" class="gallery-image" />
+          <button class="btn-view" onclick="openModal('img/certificates/Python.jpg')">View</button>
+        </div>
+        <!-- Certificate 12 -->
+        <div class="gallery-item gallery-item-large">
+          <img src="img/certificates/spring boot.jpg" alt="Certificate 12" class="gallery-image" />
+          <button class="btn-view" onclick="openModal('img/certificates/spring boot.jpg')">View</button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Modal -->
+    <div id="certificateModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImage" />
+    </div>
+  </section>
+  
+  <hr>
+  <section id="contact" class="py-5 bg-dark text-light">
+    <div class="container">
+      <h2 class="text-center text-neon mb-5">Contact Me</h2>
+      <div class="row">
+        <!-- Contact Info -->
+        <div class="col-md-6">
+          <h3 class="mb-4">Get in Touch</h3>
+          <p><i class="fas fa-map-marker-alt text-neon"></i> Address: Morappur, Dharmapuri</p>
+          <p><i class="fas fa-envelope text-neon"></i> Email: <a href="mailto:sudhayan2@gmail.com" class="text-neon">sudhayan2@gmail.com</a></p>
+          <p><i class="fas fa-phone text-neon"></i> Phone: <a href="tel:+919944763361" class="text-neon">+91 9944763361</a></p>
+          <div class="social-icons mt-4">
+            <a href="https://www.linkedin.com/in/udhayan-sk7/" target="_blank" class="text-neon me-3"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/UdhayanS" target="_blank" class="text-neon me-3"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com" target="_blank" class="text-neon me-3"><i class="fab fa-twitter"></i></a>
+            <a href="https://wa.me/9944763361" target="_blank" class="text-neon me-3"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/udhayan_sk7/" target="_blank" class="text-neon"><i class="fab fa-instagram"></i></a>
+          </div>
+          
+        </div>
+        <!-- Contact Form -->
+        <div class="col-md-6">
+          <form id="contactForm" class="neon-form">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" id="name" class="form-control" placeholder="Enter your name" required />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" class="form-control" placeholder="Enter your email" required />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" class="form-control" rows="4" placeholder="Your message..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-neon w-100 text-light">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
 
 
 
