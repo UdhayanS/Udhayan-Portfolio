@@ -609,10 +609,11 @@ p {
 
 .close {
   position: absolute;
-  top: 20px;
-  right: 30px;
+  bottom: 40px;
+  left: 50%;
+  
   color: #fff;
-  font-size: 30px;
+  font-size: 100px;
   font-weight: bold;
   cursor: pointer;
 }
