@@ -104,7 +104,7 @@
   animation-delay: 0.005s; /* Second element, 1s delay */
   visibility: visible;
   color: #ffffff;
-/*   text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 40px #39ff14; */
+  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 40px #39ff14;
   font-family: 'Courier New', Courier, monospace;
   font-size: large;
 
