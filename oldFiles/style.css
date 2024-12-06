@@ -1,0 +1,689 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Roboto:wght@400;500;700&display=swap');
+
+
+/* Navbar */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+  color: #f5a623; /* Warm Orange on Hover */
+}
+
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease-in-out;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  font-style: normal;
+  width: 100px;
+  text-align: center;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff; /* Turquoise Green */
+  bottom: -3px;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #50e3c2; /* Turquoise Green on Hover */
+  background-image: linear-gradient(to bottom right, #000000, #50E3C2);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Button */
+#btnn {
+  border: 2px solid white;
+  border-color: #ffffff;
+  color: #ffffff;
+  /* background-color: rgb(255, 255, 255); */
+  background: url(./img/hack2.gif);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  width: 200px;
+  font-weight: bold;
+}
+
+#btnn:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Hero Section */
+
+/* Add basic fade-in-up animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+.typing-container h1,
+.typing-container p,
+.typing-container a,
+#frameimg img {
+  opacity: 0;
+  transform: translateY(30px);
+  animation-fill-mode: forwards; /* Ensures the animation stays in place after completion */
+  visibility: hidden; /* Initially hidden, becomes visible after animation */
+}
+
+/* Delay and timing for staggered animation */
+.typing-container h1 {
+  animation: fadeInUp 1s ease-in-out forwards;
+  animation-delay: 0.005s; /* First element, 0.5s delay */
+  visibility: visible;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 400;
+  font-style: normal;
+  color: black;
+}
+
+.typing-container p {
+  animation: fadeInUp 1s ease-in-out forwards;
+  animation-delay: 0.005s; /* Second element, 1s delay */
+  visibility: visible;
+  color: #ffffff;
+  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 40px #39ff14;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: large;
+
+}
+
+.typing-container a {
+  animation: fadeInUp 1s ease-in-out forwards;
+  animation-delay: 0.5s; /* Third element, 1.5s delay */
+  visibility: visible;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  font-style: normal;
+
+}
+
+#frameimg img {
+  animation: fadeInUp 1s ease-in-out forwards;
+  animation-delay: 0.5s; /* Fourth element, 2s delay */
+  visibility: visible;
+}
+
+.hero-section {
+  /* background: linear-gradient(to bottom right, #4a90e2, #50e3c2); */
+  background: url(./img/bg.gif);
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  color: #fff;
+  padding: 80px 0;
+}
+
+.typing {
+  color: #fff;
+}
+
+.custom-btn {
+  background-color: #f5a623;
+  border: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.custom-btn:hover {
+  background-color: #d0021b; /* Bright Red on Hover */
+}
+
+/* Image */
+/* Image */
+#frameimg img {
+  border-radius: 50%; /* Make the image round */
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover-shadow:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+/* About Section */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Styles for the Skills Section */
+/* Basic skill card styles */
+
+
+/* Bouncing animation */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+/* #skills{
+  background: url(./img/bg.gif);
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  color: #fff;
+  padding: 80px 0;
+} */
+/* Animation on skill icons */
+.skill-icon {
+  animation: bounce 2s infinite;
+}
+
+/* Color customization for icons */
+.text-danger {
+  color: #dc3545;
+}
+.text-primary {
+  color: #007bff;
+}
+.text-warning {
+  color: #ffc107;
+}
+.text-info {
+  color: #17a2b8;
+}
+.text-success {
+  color: #28a745;
+}
+
+/* Stars background */
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://cdn.pixabay.com/photo/2015/09/18/19/12/space-942220_960_720.jpg') no-repeat center center fixed;
+  background-size: cover;
+  z-index: -1;
+  animation: starryBackground 30s linear infinite;
+}
+
+@keyframes starryBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
+
+/* Section Styling */
+#skills {
+  padding: 80px 0;
+  color: #00ff00;
+  font-family: 'Courier New', Courier, monospace;
+  position: relative;
+}
+
+/* Section Title */
+#skills h2 {
+
+  color: #39ff14;
+  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 15px #39ff14;
+  margin-bottom: 50px;
+}
+
+/* Skill Card Styling */
+.skill-card {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid #39ff14;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 0 10px #39ff14;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #39ff14;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Skill Icon Styling */
+.skill-icon {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for icons */
+.skill-card:hover .skill-icon {
+  transform: scale(1.1);
+  color: #39ff14;
+}
+
+/* Skill Title */
+.skill-card h5 {
+  font-size: 1.5rem;
+  color: #39ff14;
+  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
+  margin-top: 15px;
+}
+
+/* Skill Description */
+.skill-card p {
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .skill-card {
+    margin-bottom: 15px;
+  }
+}
+
+/* Project Card Styles */
+
+/* Card image styling */
+.project-img {
+  border-bottom: 5px solid #ff7e5f; /* Accent color below image */
+  border-radius: 15px 15px 0 0; /* Rounded corners on top */
+  transition: transform 0.3s ease; /* Smooth image transition */
+}
+
+/* Image hover effect */
+/* .card:hover .project-img {
+  transform: scale(1.05); /* Slightly zoom in image on hover */
+
+
+/* Card body styling */
+.card-body {
+  padding: 20px; /* Padding inside the card */
+}
+
+/* Project title styling */
+/* Section Background */
+#project-section {
+  background-color: #000;
+}
+
+/* Neon Text Effect */
+.text-neon {
+  color: #39ff14;
+  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 40px #39ff14;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Card Styling */
+.hacker-card {
+  border: 2px solid #39ff14;
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hacker-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #39ff14, 0 0 30px #39ff14;
+}
+
+
+
+/* Project Description */
+.project-description {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Button Styling */
+/* Default Button Style (same as hover effect) */
+.btn-outline-neon {
+  border-color: #39ff14;
+  background: url(./img/hack2.gif);
+  font-weight: bold;
+  color: #000;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0 0 10px #39ff14;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Button Hover Effect (same as default now) */
+.btn-outline-neon:hover {
+  background-color: #39ff14;
+  color: #000;
+  box-shadow: 0 0 10px #39ff14;
+}
+
+
+/* Section Background */
+#experience-section {
+  background: url(./img/bg2.gif);
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  color: #fff;
+  padding: 80px 0;
+}
+
+#experience-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0, 255, 128, 0.1) 0%, transparent 70%);
+  z-index: 0;
+  animation: pulse 4s infinite alternate;
+}
+
+/* Neon Text */
+.text-neon {
+  color: #0f0;
+  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* Experience Card */
+.experience-card {
+  background: rgba(20, 20, 20, 0.9);
+  border: 2px solid #00ff00;
+  border-radius: 10px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 0, 0.6), 0 0 35px rgba(0, 255, 0, 0.4);
+}
+
+/* Neon Line */
+.neon-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(180deg, #00ff00, rgba(0, 255, 0, 0.3));
+  animation: glow-line 2s infinite;
+}
+
+@keyframes glow-line {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+/* Title and Text Styles */
+.experience-title {
+  font-family: "Courier New", Courier, monospace;
+  color: #fff;
+  text-shadow: 0 0 5px #00ff00, 0 0 15px #00ff00;
+  margin-bottom: 15px;
+}
+
+.card-text small {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* Pulsing Background Animation */
+@keyframes pulse {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+
+/* General styles for the contact section */
+.contact-section {
+  background-color: #f8f9fa; /* Light background color */
+  padding: 40px 0; /* Top and bottom padding */
+  color: #333; /* Text color */
+}
+
+.contact-section h2 {
+  color: #007bff; /* Primary color for headings */
+  margin-bottom: 30px; /* Space below heading */
+}
+
+.contact-item {
+  background-color: #ffffff; /* White background for contact items */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding inside contact items */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+}
+
+.contact-item:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.contact-item i {
+  color: #007bff; /* Primary color for icons */
+}
+
+.contact-item h4 {
+  font-weight: bold; /* Bold headings */
+  margin-bottom: 10px; /* Space below headings */
+}
+
+.map-responsive {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  border-radius: 8px; /* Rounded corners for map */
+  margin-top: 30px; /* Space above the map */
+}
+
+.map-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+/* General Section Styling */
+#dynamic-gallery {
+  background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+}
+
+.text-neon {
+  color: #0f0;
+  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.btn-view {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #00ff00;
+  color: #000;
+  border: none;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn-view:hover {
+  background: #0f0;
+  box-shadow: 0 0 10px #00ff00;
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 70%;
+  max-width: 700px;
+  border: 5px solid #0f0;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  
+  color: #fff;
+  font-size: 100px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #ff0000;
+}
+
+/* Responsive Modal */
+@media screen and (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+  }
+}
+/* Contact Section Styling */
+.text-neon {
+  color: #08fdd8;
+  text-decoration: none;
+}
+
+.text-neon:hover {
+  color: #0fffcf;
+  text-decoration: underline;
+}
+
+.btn-neon {
+  border-color: #0fffcf;
+  background-color: #0fffcf;
+  color: #000;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0 0 10px #0fffcf;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  background: url(./img/hack2.gif);
+  font-weight: bold;
+}
+
+.btn-neon:hover {
+  background-color: #0fffcf;
+  box-shadow: 0 40 10px #0fffcf;
+  color: #000;
+}
+
+.neon-form .form-control {
+  background-color: transparent;
+  border: 2px solid #08fdd8;
+  color: #fff;
+}
+
+.neon-form .form-control:focus {
+  background-color: transparent;
+  border-color: #0fffcf;
+  box-shadow: 0 0 10px #0fffcf;
+}
+
+.neon-form label {
+  color: #08fdd8;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+
+
+.container{
+  font-family: 'Courier New', Courier, monospace;
+}
+
