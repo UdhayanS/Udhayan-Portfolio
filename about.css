@@ -46,7 +46,6 @@
 
 
 
-
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 
@@ -94,10 +93,10 @@ html {
 }
 
 body {
-  margin: var(--header-height) 0 0 0;
+  /* margin: var(--header-height) 0 0 0; */
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: var(--body-color);
+  
   color: var(--text-color);
 }
 
@@ -200,7 +199,6 @@ img {
   font-size: 1.5rem;
 }
 
-
 /*Active link*/
 .active-link {
   position: relative;
@@ -271,3 +269,34 @@ img {
     z-index: var(--z-fixed); /* Ensure it's visible on top of other elements */
   }
 
+
+
+
+
+
+
+
+
+
+  #progress{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 70px;
+    right: 25px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    display: grid;
+    place-items: center;
+}
+#progress-value{
+    display: block;
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    font-size: 20px;
+}
