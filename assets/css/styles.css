@@ -11690,203 +11690,230 @@ pre .code {
 
 
 
-
-
-
 /** footer **/
 
 .footer {
-  background: #141629;
-  padding-top: 85px;
-  text-align: center;
+     background: #141629;
+     padding-top: 85px;
+     text-align: center;
 }
 
 .footer .titlepage {
-  text-align: left;
-  padding-bottom: 0px;
+     text-align: left;
+     padding-bottom: 0px;
 }
 
 .footer .titlepage h2 {
-  color: #fff;
-  margin: inherit;
-  border-bottom: #fff solid 1px;
+     color: #fff;
+     margin: inherit;
+     border-bottom: #fff solid 1px;
 }
 
 ul.location_icon {
-  padding-top: 12px;
+     padding-top: 12px;
 }
 
 ul.location_icon li {
-  display: inline-block;
-  font-size: 18px;
-  line-height: 20px;
-  color: #fff;
-  padding-left: 62px;
+     display: inline-block;
+     font-size: 18px;
+     line-height: 20px;
+     color: #fff;
+     padding-left: 62px;
 }
 
 ul.location_icon li a {
-  font-size: 30px;
-  color: #fff;
-  line-height: 30px;
-  padding-right: 15px;
+     font-size: 30px;
+     color: #fff;
+     line-height: 30px;
+     padding-right: 15px;
 }
 
 ul.location_icon li a:hover {
-  color: #00ff00;
+     color: #e4a32c;
 }
 
 .main_form {
-  padding: 50px 0px 0px 0px;
+     padding: 50px 0px 0px 0px;
 }
 
 .main_form .contactus {
-  border: inherit;
-  padding: 0px 15px;
-  margin-bottom: 20px;
-  width: 100%;
-  height: 60px;
-  background: transparent;
-  color: #777977;
-  font-size: 18px;
-  font-weight: normal;
-  border-bottom: #ddd solid 1px;
+     border: inherit;
+     padding: 0px 15px;
+     margin-bottom: 20px;
+     width: 100%;
+     height: 60px;
+     background: transparent;
+     color: #777977;
+     font-size: 18px;
+     font-weight: normal;
+     border-bottom: #ddd solid 1px;
 }
 
 .main_form .textarea {
-  border: inherit;
-  padding: 0px 15px;
-  margin-bottom: 20px;
-  width: 100%;
-  background: transparent;
-  color: #777977;
-  font-size: 18px;
-  font-weight: normal;
-  border-bottom: #ddd solid 1px;
-  padding-top: 30px;
+     border: inherit;
+     padding: 0px 15px;
+     margin-bottom: 20px;
+     width: 100%;
+     background: transparent;
+     color: #777977;
+     font-size: 18px;
+     font-weight: normal;
+     border-bottom: #ddd solid 1px;
+     padding-top: 30px;
 }
 
 .main_form .send_btn {
-  font-size: 17px;
-  transition: ease-in all 0.5s;
-  background-color: #fff;
-  text-transform: uppercase;
-  color: #000;
-  padding: 10px 0px;
-  max-width: 160px;
-  width: 100%;
-  display: block;
-  margin-top: 30px;
+     font-size: 17px;
+     transition: ease-in all 0.5s;
+     background-color: #fff;
+     text-transform: uppercase;
+     color: #000;
+     padding: 10px 0px;
+     max-width: 160px;
+     width: 100%;
+     display: block;
+     margin-top: 30px;
 }
 
 .main_form .send_btn:hover {
-  background-color: #00ff00;
-  transition: ease-in all 0.5s;
-  color: #fff;
+     background-color: #00ff00;
+     transition: ease-in all 0.5s;
+     color: #fff;
 }
 
 #request *::placeholder {
-  color: #777977;
-  opacity: 1;
+     color: #777977;
+     opacity: 1;
 }
 
 ul.social_icon {
-  padding-top: 37px;
+     padding-top: 37px;
 }
 
 ul.social_icon li {
-  display: inline-block;
+     display: inline-block;
 }
 
 ul.social_icon li a {
-  background: #fff;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 25px;
-  border-radius: 30px;
-  margin: 0 3px;
+     background: #fff;
+     width: 40px;
+     height: 40px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 25px;
+     border-radius: 30px;
+     margin: 0 3px;
 }
 
 ul.social_icon li a:hover {
-  background-color: #00ff00;
-  color: #fff;
+     background-color: #00ff00;
+     color: #fff;
 }
 
 .map {
-  padding-top: 60px;
+     padding-top: 60px;
 }
 
 .map figure {
-  margin: 0;
+     margin: 0;
 }
 
 .map figure img {
-  width: 100%;
+     width: 100%;
 }
 
 .bottom_form h3 {
-  font-weight: 600;
-  font-size: 20px;
-  text-align: left;
-  color: #fff;
-  padding-bottom: 15px;
+     font-weight: 600;
+     font-size: 20px;
+     text-align: left;
+     color: #fff;
+     padding-bottom: 15px;
 }
 
 .bottom_form .enter {
-  border: inherit;
-  padding: 0px 19px;
-  width: 62%;
-  height: 53px;
-  background: #fff;
-  color: #000;
-  font-size: 18px;
-  font-weight: 600;
-  float: left;
+     border: inherit;
+     padding: 0px 19px;
+     width: 62%;
+     height: 53px;
+     background: #fff;
+     color: #000;
+     font-size: 18px;
+     font-weight: 600;
+     float: left;
 }
 
 .sub_btn {
-  font-size: 17px;
-  transition: ease-in all 0.5s;
-  background-color: #00ff00;
-  color: #fff;
-  padding: 11px 0px;
-  max-width: 200px;
-  width: 100%;
-  display: block;
-  font-weight: 500;
-  text-transform: uppercase;
-  margin-left: -2px;
+     font-size: 17px;
+     transition: ease-in all 0.5s;
+     background-color: #00ff00;
+     color: #fff;
+     padding: 11px 0px;
+     max-width: 200px;
+     width: 100%;
+     display: block;
+     font-weight: 500;
+     text-transform: uppercase;
 }
 
 .sub_btn:hover {
-  background-color: #000;
-  transition: ease-in all 0.5s;
-  color: #fff;
+     background-color: #000;
+     transition: ease-in all 0.5s;
+     color: #fff;
 }
 
 .copyright {
-  margin-top: 70px;
-  padding: 20px 0px;
+     margin-top: 70px;
+     padding: 20px 0px;
 }
 
 .copyright p {
-  color: #fff;
-  font-size: 18px;
-  line-height: 22px;
-  text-align: center;
-  border-top: #ddd solid 1px;
-  padding-top: 25px;
+     color: #fff;
+     font-size: 18px;
+     line-height: 22px;
+     text-align: center;
+     border-top: #ddd solid 1px;
+     padding-top: 25px;
 }
 
 .copyright a {
-  color: #fff;
+     color: #fff;
 }
 
 .copyright a:hover {
-  color: #00ff00;
+     color: #00ff00;
 }
+@media (max-width: 768px) {
+     .map {
+         padding-top: 30px; /* Reduce padding on smaller screens */
+     }
+     
+     .map iframe {
+         width: 100%;
+         height: 250px; /* Adjust height for mobile */
+     }
+ }
+ @media (max-width: 768px) {
+     .main_form {
+         padding: 20px 0; /* Reduce padding for small screens */
+     }
+ 
+     .contactus, .textarea {
+         font-size: 16px; /* Adjust font size for readability */
+         height: 50px; /* Reduce input height */
+     }
+ 
+     .textarea {
+         height: 120px; /* Adjust textarea height */
+         padding-top: 10px;
+     }
+ 
+     .send_btn {
+         font-size: 16px;
+         padding: 10px;
+         width: 100%; /* Make button full width */
+     }
+ }
 
 
 /** end footer **/
